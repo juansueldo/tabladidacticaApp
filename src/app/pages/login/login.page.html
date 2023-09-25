@@ -4,15 +4,37 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-input
-  type="email"
-  fill="solid"
-  label="Email"
-  labelPlacement="floating"
-  helperText="Ingresa tu a valid email"
-  errorText="Invalid email"
-  ngModel
-  email
-></ion-input>
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-header class="container-subtitle">
+    <ion-title class="subtitle">Bienvenido, <br> Para continuar debes ingresar con tu cuenta</ion-title>
+  </ion-header>
+  
+  <div class="container-input">
+    <ion-item counter="true">
+      <ion-label position="floating" type="email">Ingresa tu correo electrónico:</ion-label>
+      <ion-input type="email" [clearInput]="true" errorText="Invalid email"
+      ngModel
+      email></ion-input>
+      <div slot="error">Error. Correo Inválido</div>
+    </ion-item>
+  </div>
+  
+  <div class="container-input">
+  <ion-item counter="true">
+    <ion-label position="floating">Ingresa tu contraseña:</ion-label>
+    <ion-input type="password"></ion-input>
+    <div slot="error">Please enter a valid email</div>
+  </ion-item>
+  </div>
+  <ion-button color="medium" expand="full">Ingresar</ion-button>
+
+  <div class="ingreso-rapido">
+    <h2>Botones de acceso rápido</h2>
+    <div class="container-perfiles">
+      <ion-button color="danger" class="admin acceso-rapido" expand="full">Admin</ion-button>
+      <ion-button class="invitado acceso-rapido" expand="full">Invitado</ion-button>
+      <ion-button color="success" class="usuario acceso-rapido" expand="full">Alumno</ion-button>
+    </div>
+  </div>
+
 </ion-content>
