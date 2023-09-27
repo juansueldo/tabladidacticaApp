@@ -11,7 +11,7 @@
   
   <div class="container-input">
     <ion-item counter="true">
-      <ion-label position="floating" type="email">Ingresa tu correo electrónico:</ion-label>
+      <ion-label position="floating" type="email" aria-label="Email">Ingresa tu correo electrónico:</ion-label>
       <ion-input type="email" [clearInput]="true" errorText="Invalid email"
       ngModel
       email></ion-input>
@@ -26,7 +26,7 @@
     <div slot="error">Please enter a valid email</div>
   </ion-item>
   </div>
-  <ion-button color="medium" expand="full">Ingresar</ion-button>
+  <ion-button color="medium" expand="full" (click)="submit()">Ingresar</ion-button>
 
   <div class="ingreso-rapido">
     <h2>Botones de acceso rápido</h2>

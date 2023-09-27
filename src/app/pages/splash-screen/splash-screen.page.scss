@@ -3,6 +3,13 @@ ion-content{
     //--background: black;
     --background: #fad06a;
 }
+.top{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
 .container{
     margin-top: 70%;  
   }
@@ -10,8 +17,7 @@ ion-content{
   .icono{
       height: 100px;
       width: 100px;    
-      box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-      -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+      filter: drop-shadow(13px 11px 14px #000000);
   }
   .title{
     //color: white;
