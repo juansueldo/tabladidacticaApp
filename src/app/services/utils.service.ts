@@ -22,7 +22,9 @@ export class UtilsService {
   //Dismiss
 
   async dismissLoading() {
-    return await this.loadingController.dismiss();
+    return await this.loadingController.dismiss({
+      cssClass: 'toast-bg'
+    });
   }
 
   //================ LocalStorage ================
