@@ -14,9 +14,10 @@ ion-title{
     margin-bottom: 50px;
 }
 .subtitle{
+    margin-top: 30px;
     font-weight: 300;
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     color: #e96e5f;
 }
 .container-input{
@@ -35,11 +36,18 @@ ion-item {
 h2{
     color: #447f73;
 }
-.container-perfiles{
-    padding: 30px
+.container-buttons{
+    margin-top: 40px;
+    display: block;
 }
-.admin, .invitado{
-    margin-bottom: 20px
+.fast-login{
+    padding: 25px 0;
+}
+.login{
+    --background: #914f40;
+}
+.admin{
+    --background: #447f73;
 }
 .invitado{
     --background: #e96e5f;

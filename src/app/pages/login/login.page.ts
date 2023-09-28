@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { User } from 'src/app/models/user.model';
 import { CustomInputComponent } from 'src/app/components/custom-input/custom-input.component';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -40,7 +41,7 @@ export class LoginPage implements OnInit {
         
         this.utilsSvc.dismissLoading();
         this.utilsSvc.presentToast({
-          message: `Te damos la bienvenida ${user.name}`,
+          message: `Te damos la bienvenida ${user.email}`,
           duration: 500,
           color: 'warning',
           icon: 'person-outline'
@@ -61,9 +62,9 @@ export class LoginPage implements OnInit {
   signup(){
     this.utilsSvc.routerLink('/signup')
   }
-  logueoRapido(email:string,pass:string){
-    this.form.controls['email'].patchValue(email);
-    this.form.controls['pass'].patchValue(pass);
+  logueoRapido(email:string, pass:string){
+    this.form.controls['email'].setValue(email);
+    this.form.controls['password'].setValue(pass);
   }
 
 }

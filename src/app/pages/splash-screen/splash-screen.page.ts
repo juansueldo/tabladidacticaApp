@@ -9,9 +9,9 @@ import { Router } from '@angular/router';
 export class SplashScreenPage implements OnInit {
 
   constructor(private route: Router) {
-    setTimeout(() => {
+   /* setTimeout(() => {
       this.route.navigateByUrl('/login');
-    },2500);
+    },2500);*/
    }
 
   ngOnInit() {

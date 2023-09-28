@@ -7,16 +7,18 @@ import { IonicModule } from '@ionic/angular';
 import { LoginPageRoutingModule } from './login-routing.module';
 
 import { LoginPage } from './login.page';
+import { CustomInputComponent } from "../../components/custom-input/custom-input.component";
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    LoginPageRoutingModule,
-    FormsModule,
-    ReactiveFormsModule
-  ],
-  declarations: [LoginPage]
+    declarations: [LoginPage],
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        LoginPageRoutingModule,
+        FormsModule,
+        ReactiveFormsModule,
+        CustomInputComponent
+    ]
 })
 export class LoginPageModule {}

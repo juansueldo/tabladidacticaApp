@@ -1,40 +1,49 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Tabla Didáctica App</ion-title>
+<ion-header class="ion-no-border"  class="shadow">
+  <ion-toolbar  >
+    <ion-title  ngClass="{'ion-text-center ion-no-margin' : centerTitle}">Tabla Didáctica App</ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content [fullscreen]="true" class="ion-padding">
-  <ion-header class="container-subtitle">
-    <ion-title class="subtitle">Bienvenido, <br> Para continuar debes ingresar con tu cuenta</ion-title>
-  </ion-header>
-  
-  <div class="container-input">
-    <ion-item counter="true">
-      <ion-label position="floating" type="email" aria-label="Email">Ingresa tu correo electrónico:</ion-label>
-      <ion-input type="email" [clearInput]="true" errorText="Invalid email"
-      ngModel
-      email></ion-input>
-      <div slot="error">Error. Correo Inválido</div>
-    </ion-item>
+<ion-content>
+  <div class="container content">
+   <div>
+    <ion-title class="ion-text-center" class="subtitle">
+      Para continuar ingresa con tu cuenta
+    </ion-title>
   </div>
+    <div class="buttons-container">
+      <form (keyup.enter)="submit()" (ngSubmit)="submit()" class="ion-text-center">
+      
+        <app-custom-input  autocomplete="email" [control]="form.controls.email" type="email" label="Correo" icon="mail-outline"></app-custom-input>
+        <div *ngIf="form.controls.email && form.controls.email.dirty">
+          <div class="validators" *ngIf="form.controls.email.errors?.['required']" > Ingresa tu email</div>
+          <div class="validators" *ngIf="form.controls.email.errors?.['email']" > Ingresa un email valido</div>
+        </div>
+        <app-custom-input  [control]="form.controls.password" type="password" label="Contraseña" icon="lock-closed-outline"></app-custom-input>
+        <div *ngIf="form.controls.password && form.controls.password.dirty">
+          <div class="validators" *ngIf="form.controls.password.errors?.['required']" > Ingresa tu contraseña</div>
+        </div>
   
-  <div class="container-input">
-  <ion-item counter="true">
-    <ion-label position="floating">Ingresa tu contraseña:</ion-label>
-    <ion-input type="password"></ion-input>
-    <div slot="error">Please enter a valid email</div>
-  </ion-item>
-  </div>
-  <ion-button color="medium" expand="full" (click)="submit()">Ingresar</ion-button>
+        <ion-button expand="full" class="ion-margin-vertical login" [disabled]="form.invalid" type="submit" shape="round">
+          Ingresar
+          <ion-icon slot="end" name="log-in-outline"></ion-icon>
+        </ion-button>
+       
+      </form>
+      <div class="container-buttons">
+        <ion-button expand="full"  class="ion-margin-vertical fast-login admin"  shape="round" (click)='logueoRapido("admin@admin.com.ar", "123456")'>
+          Admin
+        </ion-button>
+        <ion-button expand="full"  class="ion-margin-vertical fast-login invitado"  shape="round" (click)='logueoRapido("invitado@invitado.com.ar", "123456")'>
+          Invitado
+        </ion-button>
+        <ion-button expand="full"  class="ion-margin-vertical fast-login alumno"  shape="round" (click)='logueoRapido("juan@gmail.com", "solano823")'>
+          Alumno
+        </ion-button>
 
-  <div class="ingreso-rapido">
-    <h2>Botones de acceso rápido</h2>
-    <div class="container-perfiles">
-      <ion-button color="danger" class="admin acceso-rapido" expand="full">Admin</ion-button>
-      <ion-button class="invitado acceso-rapido" expand="full">Invitado</ion-button>
-      <ion-button color="success" class="usuario acceso-rapido" expand="full">Alumno</ion-button>
+      </div>
+     
+      
     </div>
+  
   </div>
-
 </ion-content>
