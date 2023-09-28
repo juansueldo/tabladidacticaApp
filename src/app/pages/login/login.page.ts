@@ -27,7 +27,7 @@ export class LoginPage implements OnInit {
   submit() {
     if (this.form.valid) {
       //console.log(this.form.value);
-      this.utilsSvc.presentLoading({message: 'Autenticando...',cssClass: 'custom-loading'})
+      this.utilsSvc.presentLoading({message: 'Autenticando...',spinner: 'bubbles',cssClass: 'custom-loading'})
       this.firebaseSvc.login(this.form.value as User).then(async res =>{
         let user: User={
           uid: res.user.uid,
