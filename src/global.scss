@@ -28,3 +28,13 @@
 *{
     font-family: 'Skranji', cursive;
 }
+.toast-bg {
+    --background: #914f40;
+    color: #1c6dff;
+}
+ion-loading.custom-loading {
+    --background: #447f73;
+    --spinner-color: #914f40;
+  
+    color: #914f40;
+  }

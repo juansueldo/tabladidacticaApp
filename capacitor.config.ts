@@ -2,7 +2,11 @@ import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'io.ionic.tabladidacticaapp',
+<<<<<<< HEAD
   appName: 'TablaDidacticaApp',
+=======
+  appName: 'tabladidacticaApp',
+>>>>>>> d64588022edcb74922cf32a34184e79f2923d45e
   webDir: 'www',
   server: {
     androidScheme: 'https'

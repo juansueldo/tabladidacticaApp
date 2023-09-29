@@ -22,8 +22,11 @@
     justify-content: center;
     align-items: center;
     background-color: #447f73;
+    cursor: pointer;
 }
-
+.boton-numero:hover{
+    background-color: #274d45;
+}
 img{
     height: 100px;
 }

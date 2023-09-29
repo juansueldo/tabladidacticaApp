@@ -27,7 +27,7 @@ export class LoginPage implements OnInit {
   submit() {
     if (this.form.valid) {
       //console.log(this.form.value);
-      this.utilsSvc.presentLoading({message: 'Autenticando...'})
+      this.utilsSvc.presentLoading({message: 'Autenticando...',spinner: 'bubbles',cssClass: 'custom-loading'})
       this.firebaseSvc.login(this.form.value as User).then(async res =>{
         let user: User={
           uid: res.user.uid,
@@ -42,8 +42,8 @@ export class LoginPage implements OnInit {
         this.utilsSvc.dismissLoading();
         this.utilsSvc.presentToast({
           message: `Te damos la bienvenida ${user.email}`,
-          duration: 500,
-          color: 'warning',
+          duration: 1500,
+          cssClass: 'toast-bg',
           icon: 'person-outline'
         })
 
@@ -51,8 +51,8 @@ export class LoginPage implements OnInit {
       }, error =>{
         this.utilsSvc.presentToast({
           message: 'Usuario y/o contraseña inválida',
-          duration: 5500,
-          color: 'alert',
+          duration: 1500,
+          cssClass: 'toast-bg',
           icon: 'alert-circle-outline'
         })
         this.utilsSvc.dismissLoading();
