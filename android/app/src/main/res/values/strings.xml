@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">TablaDidacticaApp</string>
+    <string name="title_activity_main">TablaDidacticaApp</string>
+    <string name="package_name">io.ionic.tabladidacticaapp</string>
+    <string name="custom_url_scheme">io.ionic.tabladidacticaapp</string>
+</resources>
