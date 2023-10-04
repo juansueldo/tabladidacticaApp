@@ -23,20 +23,20 @@
           <div class="validators" *ngIf="form.controls.password.errors?.['required']" > Ingresa tu contraseña</div>
         </div>
   
-        <ion-button expand="full" class="ion-margin-vertical login" [disabled]="form.invalid" type="submit" shape="round">
+        <ion-button expand="full" size="large" class="ion-margin-vertical login" [disabled]="form.invalid" type="submit" shape="round">
           Ingresar
           <ion-icon slot="end" name="log-in-outline"></ion-icon>
         </ion-button>
        
       </form>
       <div class="container-buttons">
-        <ion-button expand="full"  class="ion-margin-vertical fast-login admin"  shape="round" (click)='logueoRapido("admin@admin.com.ar", "123456")'>
+        <ion-button expand="full" size="large" class="ion-margin-vertical fast-login admin"  shape="round" (click)='logueoRapido("admin@admin.com.ar", "123456")'>
           Admin
         </ion-button>
-        <ion-button expand="full"  class="ion-margin-vertical fast-login invitado"  shape="round" (click)='logueoRapido("invitado@invitado.com.ar", "123456")'>
+        <ion-button expand="full" size="large"   class="ion-margin-vertical fast-login invitado"  shape="round" (click)='logueoRapido("invitado@invitado.com.ar", "123456")'>
           Invitado
         </ion-button>
-        <ion-button expand="full"  class="ion-margin-vertical fast-login alumno"  shape="round" (click)='logueoRapido("juan@gmail.com", "solano823")'>
+        <ion-button expand="full" size="large"   class="ion-margin-vertical fast-login alumno"  shape="round" (click)='logueoRapido("juan@gmail.com", "solano823")'>
           Alumno
         </ion-button>
 
