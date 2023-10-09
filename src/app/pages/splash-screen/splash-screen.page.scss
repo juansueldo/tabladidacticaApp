@@ -1,29 +1,52 @@
-
 ion-content{
-    //--background: black;
-    --background: #fad06a;
-}
-.top{
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-}
-.container{
-    margin-top: 70%;  
-  }
-  
-  .icono{
-      height: 100px;
-      width: 100px;    
-      filter: drop-shadow(13px 11px 14px #000000);
-  }
-  .title{
-    //color: white;
-    color: #e96e5f;
-  }
-  
+      height: 100vh;
+    }
+    .container-splash{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #fad06a;
+    }
+    .container-splash h2{
+      color: #e96e5f;
+        font-weight: 600;
+        position: absolute;
+        text-shadow: 1px 1px 2px rgb(0, 0, 0);
+        
+    }
+    .alumn{
+        top: 0;
+        font-size: 2.2rem;
+    }
+    .division{
+        bottom: 0;
+        font-size: 2.2rem;
+    }
+    .splash{
+      height: 200px;
+      object-fit: contain;
+    }
+    .container-logo{
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    .background{
+      position: absolute;
+      height: 850px;
+      z-index: 2;
+    }
+    .logo{
+      margin-top: 325px;
+      height: 200px;
+      z-index: 10;
+    }
   .slide-in-right {
       -webkit-animation: slide-in-right 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
               animation: slide-in-right 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
